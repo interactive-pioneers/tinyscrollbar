@@ -1,0 +1,9 @@
+{
+  "name": "tinyscrollbar",
+  "version": "2.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "jquery": "~1.7.2"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "tinyscrollbar",
+  "title": "Tiny Scrollbar",
+  "description": "Tiny Scrollbar is a nice and elegant way to enable the scrolling of content on mobile and desktop devices.",
+  "version": "2.0.0",
+  "homepage": "https://github.com/interactive-pioneers/tinyscrollbar.git",
+  "author": {
+    "name": "Ain Tohvri",
+    "url": "https://github.com/ain"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/interactive-pioneers/tinyscrollbar.git"
+  },
+  "bugs": "https://github.com/interactive-pioneers/tinyscrollbar/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.7.2"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
