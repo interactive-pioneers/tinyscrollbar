@@ -15,10 +15,10 @@ In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/tinyscrollbar.min.js"></script>
+<script src="dist/jquery.tinyscrollbar.min.js"></script>
 <script>
 jQuery(function($) {
-  $.awesome(); // "awesome"
+  $('#scrollbarId').tinyscrollbar();
 });
 </script>
 ```
