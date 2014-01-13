@@ -11,7 +11,8 @@
       lockscroll: true,
       size: "auto",
       sizethumb: "auto",
-      invertscroll: false
+      invertscroll: false,
+      enddetection: 0.9
     }
   };
   a.fn.tinyscrollbar = function(d) {
@@ -27,6 +28,8 @@
 
   function B(q, g) {
     var k = this,
+            endDetectionLock = false,
+            contentChangeDetector,
             t = q,
             j = {
               obj: a(".viewport", q)
@@ -123,10 +126,43 @@
         r = Math.min((h[g.axis] - j[g.axis]), Math.max(0, r));
         p.obj.css(n, r / d.ratio);
         h.obj.css(n, -r);
+        detectEnd();
         if (g.lockscroll || (r !== (h[g.axis] - j[g.axis]) && r !== 0)) {
           A = a.event.fix(A);
           A.preventDefault();
         }
+      }
+    }
+
+    /**
+     * Detect the end of the scroll.
+     * Use the enddetection ratio from options to trigger slightly earlier.
+     * @todo Remove setTimeout call added for content load simulation.
+     * @todo Trigger event to which externals could hook to.
+     * @returns {Boolean} false on scroll end detection lock, true otherwise.
+     */
+    function detectEnd() {
+      if (endDetectionLock) {
+        return false;
+      }
+      var wholeHeight = h[g.axis];
+      var scrollHeight = wholeHeight - j[g.axis];
+      var endDetectionPoint = scrollHeight * g.enddetection;
+      if (r > endDetectionPoint && r < scrollHeight) {
+        endDetectionLock = true;
+
+        setTimeout(function() {
+          console.log('appending to ', h.obj);
+          h.obj.append('------<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>---------');
+          k.update('relative');
+        }, 2000);
+
+        contentChangeDetector = setInterval(function() {
+          if (wholeHeight < h[g.axis]) {
+            clearInterval(contentChangeDetector);
+            endDetectionLock = false;
+          }
+        }, 400);
       }
     }
 
