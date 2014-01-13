@@ -75,11 +75,11 @@ module.exports = function (grunt) {
       },
       src: {
         files: '<%= jshint.src.src %>',
-        tasks: ['jshint:src', 'qunit']
+        tasks: ['jshint:src', 'build']
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'qunit']
+        tasks: ['jshint:test']
       },
       livereload: {
         options: {
@@ -110,7 +110,8 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['connect', 'clean', 'concat', 'uglify', 'copy']);
+  grunt.registerTask('build', ['clean', 'concat', 'uglify', 'copy']);
+  grunt.registerTask('default', ['connect', 'build']);
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
