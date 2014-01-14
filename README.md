@@ -1,8 +1,11 @@
 # Tiny Scrollbar
 
-A fork of Maarten Baijs' Tiny Scrollbar http://www.baijs.com/tinyscrollbar
+Fork of Maarten Baijs' Tiny Scrollbar http://www.baijs.com/tinyscrollbar
 
-Tiny Scrollbar is a nice and elegant way to enable the scrolling of content on mobile and desktop devices.
+Tiny Scrollbar is a nice and elegant way to enable the scrolling of content on
+mobile and desktop devices.
+
+Fork adds support for detecting the (near-the-)end of the scroll.
 
 ## Getting Started
 
@@ -19,7 +22,10 @@ In your web page:
 <script>
 jQuery(function($) {
   $('#scrollbarId').tinyscrollbar();
-});
+  // Listen to the scroll reaching the end
+  $('#scrollbarId').on('enddetected', function() {
+    // Handle the scrollable area, e.g. load additional data
+  });
 </script>
 ```
 
