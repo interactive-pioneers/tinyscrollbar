@@ -171,6 +171,7 @@
         r = y.now * d.ratio;
         h.obj.css(n, -r);
         p.obj.css(n, y.now);
+        detectEnd();
       }
     }
 

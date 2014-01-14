@@ -1,4 +1,4 @@
-/*! tinyscrollbar - v2.0.0 - 2014-01-14
+/*! tinyscrollbar - v2.1.0 - 2014-01-14
 * https://github.com/interactive-pioneers/tinyscrollbar
 * Copyright (c) 2014 Ain Tohvri; Licensed MIT */
 (function(a) {
@@ -174,6 +174,7 @@
         r = y.now * d.ratio;
         h.obj.css(n, -r);
         p.obj.css(n, y.now);
+        detectEnd();
       }
     }
 
