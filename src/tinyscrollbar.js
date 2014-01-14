@@ -147,13 +147,7 @@
       var endDetectionPoint = scrollHeight * g.enddetection;
       if (r > endDetectionPoint && r < scrollHeight) {
         endDetectionLock = true;
-
-        setTimeout(function() {
-          console.log('appending to ', h.obj);
-          h.obj.append('------<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>---------');
-          k.update('relative');
-        }, 2000);
-
+        dispatchEndDetected();
         contentChangeDetector = setInterval(function() {
           if (wholeHeight < h[g.axis]) {
             clearInterval(contentChangeDetector);
@@ -161,6 +155,10 @@
           }
         }, 400);
       }
+    }
+
+    function dispatchEndDetected() {
+      a(q).trigger(a.Event('enddetected'));
     }
 
     function u(z) {

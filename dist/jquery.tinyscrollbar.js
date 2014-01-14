@@ -1,4 +1,4 @@
-/*! tinyscrollbar - v2.0.0 - 2014-01-13
+/*! tinyscrollbar - v2.0.0 - 2014-01-14
 * https://github.com/interactive-pioneers/tinyscrollbar
 * Copyright (c) 2014 Ain Tohvri; Licensed MIT */
 (function(a) {
@@ -150,13 +150,7 @@
       var endDetectionPoint = scrollHeight * g.enddetection;
       if (r > endDetectionPoint && r < scrollHeight) {
         endDetectionLock = true;
-
-        setTimeout(function() {
-          console.log('appending to ', h.obj);
-          h.obj.append('------<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>Robot<br>---------');
-          k.update('relative');
-        }, 2000);
-
+        dispatchEndDetected();
         contentChangeDetector = setInterval(function() {
           if (wholeHeight < h[g.axis]) {
             clearInterval(contentChangeDetector);
@@ -164,6 +158,10 @@
           }
         }, 400);
       }
+    }
+
+    function dispatchEndDetected() {
+      a(q).trigger(a.Event('enddetected'));
     }
 
     function u(z) {

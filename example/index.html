@@ -10,8 +10,15 @@
 	<script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
 	<script type="text/javascript">
 		jQuery(function($) {
-			$('#scrollbar1').tinyscrollbar();
-		});
+			$('#scrollbar1').tinyscrollbar()
+        .on('enddetected', function(event) {
+          var $self = $(event.currentTarget);
+          setTimeout(function() {
+            $('.overview').append('<p>---------<br />Robot<br />Robot<br />Robot<br />Robot<br />Robot<br />---------</p>');
+            $self.tinyscrollbar_update('relative');
+          }, 2000);
+        });
+    });
 	</script>
 
 </head>
