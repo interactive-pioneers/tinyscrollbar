@@ -5,7 +5,8 @@ Fork of Maarten Baijs' Tiny Scrollbar http://www.baijs.com/tinyscrollbar
 Tiny Scrollbar is a nice and elegant way to enable the scrolling of content on
 mobile and desktop devices.
 
-Fork adds support for detecting the (near-the-)end of the scroll.
+Fork adds support for detecting the near-the-end of the scroll, more precisely
+at reaching 90% of content (`options.enddetection: 0.9`).
 
 ## Getting Started
 
