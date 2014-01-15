@@ -37,4 +37,4 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Release History
-_(Nothing yet)_
+See [releases](https://github.com/interactive-pioneers/tinyscrollbar/releases).
