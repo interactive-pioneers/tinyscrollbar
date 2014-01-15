@@ -12,8 +12,8 @@ at reaching 90% of content (`options.enddetection: 0.9`).
 
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/ain/jquery-tinyscrollbar/master/dist/jquery.tinyscrollbar.min.js
-[max]: https://raw.github.com/ain/jquery-tinyscrollbar/master/dist/jquery.tinyscrollbar.js
+[min]: https://raw.github.com/interactive-pioneers/tinyscrollbar/master/dist/jquery.tinyscrollbar.min.js
+[max]: https://raw.github.com/interactive-pioneers/tinyscrollbar/master/dist/jquery.tinyscrollbar.js
 
 In your web page:
 
