@@ -34,7 +34,7 @@ jQuery(function($) {
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
+See files at [example/](https://github.com/interactive-pioneers/tinyscrollbar/tree/master/example).
 
 ## Release History
 See [releases](https://github.com/interactive-pioneers/tinyscrollbar/releases).
