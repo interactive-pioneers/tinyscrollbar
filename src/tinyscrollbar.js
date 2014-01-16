@@ -157,6 +157,9 @@
       }
     }
 
+    /**
+     * Dispatch scroll end detection event on the scrollable area.
+     */
     function dispatchEndDetected() {
       a(q).trigger(a.Event('enddetected'));
     }
