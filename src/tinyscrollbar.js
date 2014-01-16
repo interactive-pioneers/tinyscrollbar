@@ -77,8 +77,7 @@
 
     function s() {
       if (!e) {
-        p.obj.on("mousedown", i);
-        m.obj.on("mouseup", u);
+        p.obj.on("mousedown", i).on("mouseup", u);
       } else {
         j.obj[0].ontouchstart = function(z) {
           if (1 === z.touches.length) {
@@ -103,8 +102,7 @@
       o.start = l ? A.pageX : A.pageY;
       y.start = z === "auto" ? 0 : z;
       if (!e) {
-        a(document).on("mousemove", u);
-        a(document).on("mouseup", f);
+        a(document).on("mousemove", u).on("mouseup", f);
         p.obj.on("mouseup", f);
       } else {
         document.ontouchmove = function(B) {
@@ -180,8 +178,7 @@
 
     function f() {
       a("body").removeClass("noSelect");
-      a(document).off("mousemove", u);
-      a(document).off("mouseup", f);
+      a(document).off("mousemove", u).off("mouseup", f);
       p.obj.off("mouseup", f);
       document.ontouchmove = document.ontouchend = null;
     }

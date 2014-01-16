@@ -1,4 +1,4 @@
-/*! tinyscrollbar - v2.1.0 - 2014-01-14
+/*! tinyscrollbar - v2.1.2 - 2014-01-16
 * https://github.com/interactive-pioneers/tinyscrollbar
 * Copyright (c) 2014 Ain Tohvri; Licensed MIT */
 (function(a) {
@@ -80,8 +80,7 @@
 
     function s() {
       if (!e) {
-        p.obj.bind("mousedown", i);
-        m.obj.bind("mouseup", u);
+        p.obj.on("mousedown", i).on("mouseup", u);
       } else {
         j.obj[0].ontouchstart = function(z) {
           if (1 === z.touches.length) {
@@ -106,9 +105,8 @@
       o.start = l ? A.pageX : A.pageY;
       y.start = z === "auto" ? 0 : z;
       if (!e) {
-        a(document).bind("mousemove", u);
-        a(document).bind("mouseup", f);
-        p.obj.bind("mouseup", f);
+        a(document).on("mousemove", u).on("mouseup", f);
+        p.obj.on("mouseup", f);
       } else {
         document.ontouchmove = function(B) {
           B.preventDefault();
@@ -160,6 +158,9 @@
       }
     }
 
+    /**
+     * Dispatch scroll end detection event on the scrollable area.
+     */
     function dispatchEndDetected() {
       a(q).trigger(a.Event('enddetected'));
     }
@@ -180,9 +181,8 @@
 
     function f() {
       a("body").removeClass("noSelect");
-      a(document).unbind("mousemove", u);
-      a(document).unbind("mouseup", f);
-      p.obj.unbind("mouseup", f);
+      a(document).off("mousemove", u).off("mouseup", f);
+      p.obj.off("mouseup", f);
       document.ontouchmove = document.ontouchend = null;
     }
     return c();
