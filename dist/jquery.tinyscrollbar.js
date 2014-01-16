@@ -55,6 +55,13 @@
       s();
       return k;
     }
+
+    /**
+     * Update scroll position.
+     * @param {String} position. Possible values: relative or bottom:
+     *  relative - last known position of the scrollable area.
+     *  bottom - bottom of the scrollable area.
+     */
     this.update = function(z) {
       j[g.axis] = j.obj[0]["offset" + v];
       h[g.axis] = h.obj[0]["scroll" + v];
