@@ -106,11 +106,19 @@ module.exports = function (grunt) {
         src: '<%= uglify.dist.dest %>',
         dest: 'example/js/jquery.<%= pkg.name %>.min.js'
       }
+    },
+    jsdoc: {
+      dist: {
+        src: '<%= concat.dist.src %>',
+        options: {
+          destination: 'doc'
+        }
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('build', ['clean', 'concat', 'uglify', 'copy']);
+  grunt.registerTask('build', ['clean', 'concat', 'uglify', 'copy', 'jsdoc']);
   grunt.registerTask('default', ['connect', 'build']);
   grunt.registerTask('server', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
