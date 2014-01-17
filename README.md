@@ -38,3 +38,7 @@ See files at [example/](https://github.com/interactive-pioneers/tinyscrollbar/tr
 
 ## Release History
 See [releases](https://github.com/interactive-pioneers/tinyscrollbar/releases).
+
+## Support
+Please [create an issue](https://github.com/interactive-pioneers/tinyscrollbar/issues/new)
+for your question or bug report.
