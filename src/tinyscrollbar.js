@@ -23,6 +23,13 @@
     return a(this).data("tsb").update(c);
   };
 
+  /**
+   * Tiny Scrollbar component.
+   * @constructor
+   * @param {jQuery} q jQuery object to initiate the component on.
+   * @param {type} g Options.
+   * @returns {_L1.B}
+   */
   function B(q, g) {
     var k = this,
             endDetectionLock = false,
