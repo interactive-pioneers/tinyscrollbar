@@ -1,4 +1,4 @@
-# Tiny Scrollbar
+# Tiny Scrollbar [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 Fork of Maarten Baijs' Tiny Scrollbar http://www.baijs.com/tinyscrollbar
 
