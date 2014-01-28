@@ -26,7 +26,8 @@ Assuming that you don't see any red, you're ready to go. Just be sure to run `gr
 1. Create a new branch, please don't work in your `master` branch directly.
 1. Add failing tests for the change you want to make. Run `grunt` to see the tests fail.
 1. Fix stuff.
-1. Run `grunt` to see if the tests pass. Repeat steps 2-4 until done.
+1. Always write meaningful commit messages in imperative, present tense, e.g. "Add" and "Change", not "Change" or "Changes". Describe what was done and why.
+1. Run `grunt test` to see if the tests pass. Repeat steps 2-4 until done.
 1. Open `test/*.html` unit test file(s) in actual browser to ensure tests pass everywhere.
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
